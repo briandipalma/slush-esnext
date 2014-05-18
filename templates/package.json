@@ -1,0 +1,14 @@
+{
+  "name": "<%= packageName %>",
+  "version": "0.0.0",
+  "scripts": {
+    "prepublish": "npm run build",
+    "watch": "watchy -sw src -- npm run build",
+    "build": "traceur --dir src/ out/ --modules=commonjs --sourcemap"
+  },
+  "dependencies": {
+    "watchy": "^0.4.4",
+    "traceur": "^0.0.41",
+    "es6-module-loader": "^0.6.0"
+  }
+}
